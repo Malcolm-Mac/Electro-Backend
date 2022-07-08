@@ -101,10 +101,10 @@ DROP TABLE IF EXISTS `products`;
 CREATE TABLE `products` (
   `id` bigint unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `detail` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `price` decimal(2,2) NOT NULL,
+  `detail` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `price` decimal(8,2) unsigned NOT NULL,
   `stock_number` int NOT NULL,
-  `discount` decimal(2,2) NOT NULL,
+  `discount` decimal(8,2) unsigned NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -131,7 +131,7 @@ CREATE TABLE `reviews` (
   `id` bigint unsigned NOT NULL AUTO_INCREMENT,
   `product_id` bigint unsigned NOT NULL,
   `customer_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `review` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `review` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `rating` int NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
