@@ -14,7 +14,7 @@ const Header = () => {
                             src="/assets/img/logo.png"
                             alt="logo"
                             width={180}
-                            height={95}
+                            height={78}
                             priority
                         />
                     </Link>
@@ -52,8 +52,6 @@ const Header = () => {
                     </Card>
                 </Col>
             </Row>
-
-            <div></div>
         </header>
     );
 }
