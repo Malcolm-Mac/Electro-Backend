@@ -3,7 +3,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import { Container, Row, Col } from '@nextui-org/react';
-import Header from '../components/header/header';
+import Header from '../components/header/Header';
 
 const Home: NextPage = () => {
   return (
@@ -19,7 +19,7 @@ const Home: NextPage = () => {
       <main className={styles.main}>
 
         <div>
-
+    
         </div>
 
         <div>

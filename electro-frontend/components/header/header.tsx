@@ -1,14 +1,16 @@
 import React from "react";
 import Image from 'next/image'
 import Link from 'next/link'
-import { Card, Row, Text, Col, Button, Dropdown, Input } from '@nextui-org/react';
+import LoginModal from "../partials/Modal";
+
 
 const Header = () => {
+
     return (
         <header>
 
-            <Row gap={1}>
-                <Col>
+            <nav className="relative container mx-auto p-6">
+                <div className="float-left">
                     <Link href="/">
                         <Image
                             src="/assets/img/logo.png"
@@ -18,40 +20,16 @@ const Header = () => {
                             priority
                         />
                     </Link>
-                </Col>
-                <Col>
-                    <Row gap={0}>
-                        <Col>
-                            <Dropdown>
-                                <Dropdown.Button flat>Trigger</Dropdown.Button>
-                                <Dropdown.Menu aria-label="Static Actions">
-                                    <Dropdown.Item key="new">New file</Dropdown.Item>
-                                    <Dropdown.Item key="copy">Copy link</Dropdown.Item>
-                                    <Dropdown.Item key="edit">Edit file</Dropdown.Item>
-                                    <Dropdown.Item key="delete" withDivider color="error">
-                                        Delete file
-                                    </Dropdown.Item>
-                                </Dropdown.Menu>
-                            </Dropdown>
-                        </Col>
-                        <Col>
-                            <Input placeholder="Search here..." />
-                        </Col>
-                        <Col>
-                            <Button>Small</Button>
-                        </Col>
-                    </Row>
-                </Col>
-                <Col>
-                    <Card css={{ $$cardColor: '$colors$primary' }}>
-                        <Card.Body>
-                            <Text h6 size={15} color="white" css={{ m: 0 }}>
-                                3 of 3
-                            </Text>
-                        </Card.Body>
-                    </Card>
-                </Col>
-            </Row>
+                </div>
+                <div className="float-right flex gap-5">
+                    <LoginModal/>
+                    
+                    <h4>Sign Up</h4>
+
+                </div>
+            </nav>
+
+
         </header>
     );
 }
